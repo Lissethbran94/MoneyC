@@ -1,0 +1,60 @@
+<!--
+  Generated template for the DetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle de Gasto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-list>
+
+
+    <ion-list>
+ <ion-item>
+    <ion-label>Tipo de Gasto</ion-label>
+    <ion-select [(ngModel)]="gasto.TipoDeGasto">
+      <ion-option value="Transporte"> Transporte</ion-option>
+      <ion-option value="Bebida" > Bebida</ion-option>
+      <ion-option value="Comida"> Comida</ion-option>
+      <ion-option value="Recarga Telefonica "> Recarga Telefonica </ion-option>
+    </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item>
+      <ion-label floating>Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="gasto.Description"> </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Valor</ion-label>
+    <ion-textarea [(ngModel)]="gasto.Valor"> </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+ <ion-label>Date</ion-label>
+ <ion-datetime displayFormat="MM/DD/YYYY"  [(ngModel)]="gasto.Fecha"></ion-datetime>
+   </ion-item>
+
+       <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"  [(ngModel)]="gasto.Hora"></ion-datetime>
+    </ion-item>
+
+
+  </ion-list>
+<div padding>
+   <button ion-button block (click)="addGasto()"> Guardar Gasto </button>
+  <button *ngIf="id !=0" ion-button block (click)="deleteGasto()" color="danger"> Eliminar Gasto </button>
+</div>
+
+</ion-content>

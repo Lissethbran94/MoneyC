@@ -1,0 +1,48 @@
+<!--
+  Generated template for the LoggedinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bienvenido !</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-label color="primary">{{email}}</ion-label>
+
+
+  <p>
+
+     <ion-img src="assets/imgs/logo.jpeg" width="200" height="175" ></ion-img>
+
+  </p>
+  <div id="topButtons">
+
+    <div  id="nuevo">
+       <button block ion-button round (click)="createGasto()"> Nuevo Gasto </button>
+    </div>
+       <div  id="nuevoR">
+    <button block ion-button round  (click)="nuevoR()">
+       Listado
+   </button>
+        </div>
+
+        <div  id="salir">
+      <button block ion-button round  (click)="salir()">
+         Salir
+     </button>
+          </div>
+
+
+     </div>
+
+
+
+</ion-content>
